@@ -1,0 +1,329 @@
+<html>
+<head>
+  <style>
+  *{
+    margin:0px;
+    padding:0px;
+  }
+  nav{
+    height:50px;
+    background:rgba(240,240,240,1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0px 5px;
+    box-sizing:border-box;
+  }
+  #logo{
+    font-size:25px;
+  }
+  .menuIcon{
+    height:30px;
+    width:30px;
+
+  }
+  .menuIcon span{
+    display:block;
+    height:4px;
+    background:black;
+    margin-top:5px;
+  }
+  .menuItems{
+    display:none;
+  }
+  .menuItems a{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+    font-size:20px;
+    padding:5px;
+    box-sizing:border-box;
+  }
+  .show{
+    width:100%;
+    margin-top:5px;
+    background:rgba(240,240,240,1);
+    display:grid;
+    position:absolute;
+    top:50px;
+    left:0px;
+  }
+  #banner{
+    height:250px;
+    width:100%;
+    background-image:url('https://images.pexels.com/photos/5622932/pexels-photo-5622932.jpeg');
+    background-size:cover;
+    background-repeat:no-repeat; 
+    display:flex;
+    align-items:center;
+    justify-content:right;
+  }
+  #content{
+    min-height:100px;
+    width:auto;
+    color:white;
+    text-align:center;
+    padding-right:20px; 
+  }
+  #shopbtn{
+    color:white;
+    background:orange;
+    border:none;
+    border-radius:10px;
+    padding:7px 13px;
+    font-size:15px;
+  }
+  #container{
+    min-height:500px;
+    width:100%;
+    padding:0px 30px;
+    box-sizing:border-box;
+    display:grid;
+    gap:20px;
+  }
+  .card{
+    height:350px;
+    width:100%;
+    background:rgba(230,230,230,1);
+    border-radius:10px;
+    box-shadow:5px 5px 10px black;
+    overflow:hidden;
+    padding:10px 15px;
+    box-sizing:border-box;
+  }
+  .card:hover{
+    scale:1.07;
+    transition:all 0.4s;
+  }
+  .cardImg{
+    height:180px;
+    width:100%;
+    object-fit:contain;
+    border-top-right-radius:10px;
+    border-top-left-radius:10px;
+  }
+  .name{
+    color:orange;
+    font-size:18px;
+    margin-top:20px;
+  }
+  .cost{
+    color:green;
+    font-size:25px;
+    font-weight:bold;
+  }
+  .addbtn{
+    color:white;
+    background:orange;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    padding:10px 15px;
+    box-sizing:border-box;
+  }
+  footer{
+    height:50px;
+    width:100%;
+    background:#1a1a1a;
+    margin-top:20px;
+    color:white;
+    padding:10px 10px;
+    box-sizing:border-box;
+  }
+  @media(min-width:480px){
+    #container{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:0px;
+      padding:0px;
+    }
+    .card{
+      width:270px;
+      margin:20px auto;
+      overflow:hidden;
+    }
+    .menuIcon{
+      display:none;
+    }
+    .menuItems{
+      width:35%;
+      display:flex;
+      justify-content:space-evenly;
+    }
+    #banner{
+      height:500px;
+    }
+    #content{
+      font-size:30px;
+      padding-right:50px;
+    }
+    #shopbtn{
+      font-size:25px;
+      padding:10px 15px;
+    }
+  }
+ 
+  </style>
+</head>
+<body>
+  <!-- nav -->
+  <nav>
+    <div id='logo'><b>My</b><b style='color:orange;'>Shop</b></div>
+    <div class='menuIcon' onclick='showItems()'>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class='menuItems'>
+      <a href='index.html'>Home</a>
+      <a href='added cart.html'>Your Cart</a>
+      <a href='login.html'>Login</a>
+    </div>
+  </nav>
+  <!-- nav -->
+  <!-- banner -->
+  <div id='banner'>
+    <div id='content'>
+      <h2>BIG SALE</h2><br>
+      <p style='color:orange'>UP TO 50% OFF</p>
+      <p>Shop the laest <br>fashion products</p><br>
+      <button id='shopbtn'>Shop Now</button>
+    </div>    
+  </div>
+    <!-- banner -->
+  <br>
+  <h2 style='color:orange; margin-left:5px;'>Featured Products</h2><br><br>
+  <!-- card container-->  
+  <div id='container'>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+    <div class='card'>
+      <img  class='cardImg' src='#'/>
+      <p class='name'></p>
+      <p class='cost'></p>
+      <button class='addbtn'>Add Cart</button>
+    </div>
+  </div>
+<!-- card container-->  
+  <!--footer-->
+  <footer>
+    <p style='font-size:15px; text-align:center;'><b>&copy; My</b><b style='color:orange;'>Shop</b> <br> Designed by Aman Prajapati</p>
+  </footer>
+  
+</!--footer-->
+  
+  <script src='index.js'></script>
+</body>
+</html>
